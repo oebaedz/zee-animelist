@@ -12,12 +12,20 @@ const InputSearch = () => {
     router.push(`/search/${searchRef.current.value}`);
   };
 
+  const handleKeyUp = (e) => {
+    const { key } = e;
+    if (key === "Enter") {
+      router.push(`/search/${searchRef.current.value}`);
+    }
+  };
+
   return (
     <div className="flex gap-2">
       <input
         placeholder="Nama anime..."
         className="px-2 py-1 rounded-lg"
         ref={searchRef}
+        onKeyUp={handleKeyUp}
       />
       <button
         className="p-2 bg-gray-900 text-yellow-400 rounded-lg"
