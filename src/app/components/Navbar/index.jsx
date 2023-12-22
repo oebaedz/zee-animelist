@@ -3,9 +3,9 @@ import InputSearch from "./InputSearch";
 
 const Navbar = () => {
   return (
-    <header className=" px-20 bg-yellow-400">
+    <header className="px-20 lg:px-40 xl:px-60 bg-color-accent">
       <div className="py-3 flex flex-col md:flex-row justify-between items-center gap-2">
-        <Link href="/" className="font-bold text-2xl">
+        <Link href="/" className="font-bold text-3xl">
           ZeeAnimeList
         </Link>
         <InputSearch />

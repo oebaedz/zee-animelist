@@ -10,7 +10,7 @@ const Page = async () => {
   return (
     <>
       {/* Popular */}
-      <section className="px-20">
+      <section>
         <Header
           title="Anime Terpopuler"
           linkTitle="Lihat Semua"

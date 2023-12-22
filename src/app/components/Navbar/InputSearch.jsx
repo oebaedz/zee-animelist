@@ -8,14 +8,14 @@ const InputSearch = () => {
   const router = useRouter();
 
   const handleSearch = (e) => {
-    e.preventDefault();
-    router.push(`/search/${searchRef.current.value}`);
-  };
-
-  const handleKeyUp = (e) => {
-    const { key } = e;
-    if (key === "Enter") {
-      router.push(`/search/${searchRef.current.value}`);
+    const keyword = searchRef.current.value;
+    if (e.key === "Enter" || e.type === "click") {
+      if (!keyword) {
+        return;
+      } else {
+        e.preventDefault();
+        router.push(`/search/${keyword}`);
+      }
     }
   };
 
@@ -23,12 +23,12 @@ const InputSearch = () => {
     <div className="flex gap-2">
       <input
         placeholder="Nama anime..."
-        className="px-2 py-1 rounded-lg"
+        className="px-4 py-1 rounded-lg"
         ref={searchRef}
-        onKeyUp={handleKeyUp}
+        onKeyUp={handleSearch}
       />
       <button
-        className="p-2 bg-gray-900 text-yellow-400 rounded-lg"
+        className="px-4 py-2 bg-color-dark text-color-accent rounded-lg"
         onClick={handleSearch}
       >
         Cari
