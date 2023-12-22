@@ -1,6 +1,6 @@
 import AnimeList from "@/app/components/AnimeList";
 import Header from "@/app/components/AnimeList/Header";
-import { getAnime } from "@/app/libs/api-libs";
+import { getAnime } from "@/libs/api-libs";
 
 const Page = async ({ params }) => {
   const { keyword } = params;
