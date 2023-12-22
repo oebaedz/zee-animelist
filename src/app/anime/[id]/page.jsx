@@ -1,4 +1,5 @@
 import Genres from "@/app/components/Genres"
+import VideoPlayer from "@/app/components/Utilities/VideoPlayer"
 import { getAnime } from "@/app/libs/api-libs"
 import Image from "next/image"
 
@@ -27,6 +28,8 @@ const Page = async ({ params: { id } }) => {
                         <div>OVERVIEW:</div>
                         <div className="lg:line-clamp-4">{data.synopsis}</div>
                     </div>
+
+                    <VideoPlayer youtubeId={data?.trailer.youtube_id} />
                 </div>
             </div>
         </>
