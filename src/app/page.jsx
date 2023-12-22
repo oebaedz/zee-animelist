@@ -9,7 +9,6 @@ const Page = async () => {
 
   return (
     <>
-      {/* Popular */}
       <section>
         <Header
           title="Anime Terpopuler"
