@@ -6,7 +6,7 @@ const AnimeList = ({ api }) => {
     <div className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-4 text-color-primary">
       {api.data?.map((anime) => (
         <Link
-          href={`/${anime.mal_id}`}
+          href={`/anime/${anime.mal_id}`}
           className="cursor-pointer hover:text-color-accent"
           key={anime.mal_id}
         >
