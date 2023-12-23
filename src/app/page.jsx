@@ -1,11 +1,11 @@
 import AnimeList from "./components/AnimeList";
 import Header from "./components/AnimeList/Header";
-import { getAnime, getNestedAnime } from "@/libs/api-libs";
+import { getAnime, getNestedAnime, remake } from "@/libs/api-libs";
 
 const Page = async () => {
   const topAnime = await getAnime('top/anime', 'limit=10')
   let recomAnime = await getNestedAnime('recommendations/anime', 'entry')
-  recomAnime = { data: recomAnime.slice(0,10) }
+  recomAnime = remake(recomAnime, 5)
 
   return (
     <>

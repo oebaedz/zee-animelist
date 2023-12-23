@@ -10,3 +10,12 @@ export const getNestedAnime = async (resource, objProp) => {
   const response = await getAnime(resource)
   return response.data.flatMap(item => item.entry)
 }
+
+export const remake = (data, gap) => {
+  const first = ~~(Math.random() * (data.length - gap) + 1)
+  const last = first + gap
+  const response = {
+    data: data.slice(first, last)
+  }
+  return response 
+}
