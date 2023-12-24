@@ -5,7 +5,6 @@ const CommentList = async ({ anime_mal_id, anime_image }) => {
   const comments = await prisma.comment.findMany({
     where: { anime_mal_id },
   });
-  console.log(comments);
 
   return (
     <div>
