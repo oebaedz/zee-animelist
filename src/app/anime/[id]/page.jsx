@@ -1,5 +1,6 @@
 import AddFavoriteBtn from "@/app/components/AnimeList/AddFavoriteBtn";
-import CommentBtn from "@/app/components/AnimeList/CommentBtn";
+import CommentList from "@/app/components/AnimeList/CommentList";
+import CommentSection from "@/app/components/AnimeList/CommentSection";
 import Genres from "@/app/components/Genres";
 import HeaderMenu from "@/app/components/Utilities/HeaderMenu";
 import VideoPlayer from "@/app/components/Utilities/VideoPlayer";
@@ -67,10 +68,15 @@ const Page = async ({ params: { id } }) => {
         </div>
       </div>
       <div className="my-8">
-        <CommentBtn
+        <div className="my-4 text-color-primary">
+          <h3>Diskusi dan Komentar</h3>
+          <CommentList anime_mal_id={id} anime_image={data?.images.webp.image_url} />
+        </div>
+        <CommentSection
           anime_mal_id={id}
           user_email={user?.email}
           username={user?.name}
+          anime_title={data?.title}
         />
       </div>
     </>

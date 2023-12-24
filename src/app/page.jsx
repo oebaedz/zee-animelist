@@ -18,7 +18,7 @@ const Page = async () => {
         <AnimeList api={topAnime} />
       </section>
       <hr className="my-3"/>
-      <section>
+      <section className="mb-10">
         <Header
           title="Rekomendasi Anime"
           linkTitle="Lihat Semua"

@@ -24,8 +24,7 @@ model Comment {
   id              Int @id @default(autoincrement())
   anime_mal_id    String
   user_email      String
-  username       String
+  username        String
   comment         String
-
-  @@unique([user_email, anime_mal_id])
+  anime_title     String
 }

@@ -11,8 +11,6 @@ const Favorite = async () => {
     where: { user_email: user.email },
   });
 
-  console.log({ favorite });
-
   return (
     <section className="text-color-primary mb-8">
       <HeaderMenu title={"My Favorite"} />

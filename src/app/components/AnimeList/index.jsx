@@ -20,8 +20,10 @@ const AnimeList = ({ api }) => {
           />
           <div className="p-1">
             <h3 className=" font-bold text-xs truncate py-1">{anime.title}</h3>
-            <p className="text-xs">{`${anime.episodes} episodes`}</p>
-            <p className="text-xs">{anime.year}</p>
+            {anime.episodes && (
+              <p className="text-xs">{`${anime.episodes} episodes`}</p>
+            )}
+            {anime.year && <p className="text-xs">{anime.year}</p>}
           </div>
         </Link>
       ))}
