@@ -1,4 +1,5 @@
 import AddFavoriteBtn from "@/app/components/AnimeList/AddFavoriteBtn";
+import CommentBtn from "@/app/components/AnimeList/CommentBtn";
 import Genres from "@/app/components/Genres";
 import HeaderMenu from "@/app/components/Utilities/HeaderMenu";
 import VideoPlayer from "@/app/components/Utilities/VideoPlayer";
@@ -64,6 +65,13 @@ const Page = async ({ params: { id } }) => {
 
           <VideoPlayer youtubeId={data?.trailer.youtube_id} />
         </div>
+      </div>
+      <div className="my-8">
+        <CommentBtn
+          anime_mal_id={id}
+          user_email={user?.email}
+          username={user?.name}
+        />
       </div>
     </>
   );

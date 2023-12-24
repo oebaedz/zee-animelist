@@ -14,7 +14,7 @@ const Favorite = async () => {
   console.log({ favorite });
 
   return (
-    <section className="text-color-primary">
+    <section className="text-color-primary mb-8">
       <HeaderMenu title={"My Favorite"} />
       <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-4">
         {favorite.map((fav) => {
