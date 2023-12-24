@@ -26,7 +26,7 @@ const VideoPlayer = ({ youtubeId }) => {
     const PlayerButton = () => {
         return (
             <div className="mt-8">
-                <button onClick={handlePlayerButton} className="text-color-dark bg-color-accent p-2 rounded-md">Tonton Trailer</button>
+                <button onClick={handlePlayerButton} className="text-color-dark bg-color-accent px-6 py-2 rounded-md">Tonton Trailer</button>
             </div>
         )
     }

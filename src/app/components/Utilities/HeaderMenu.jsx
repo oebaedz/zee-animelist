@@ -14,10 +14,10 @@ const HeaderMenu = ({ title }) => {
     }
     return (
         <div>
-            <div className="flex justify-between items-center py-8">
-                <button onClick={handleBack} className=" text-color-accent"><ArrowSquareLeft size={25}/></button>
+            <div className="flex justify-between items-center py-6">
+                <button onClick={handleBack} className=" text-color-accent"><ArrowSquareLeft size={35}/></button>
                 <h3 className="text-center text-2xl font-bold text-color-accent">{title}</h3>
-                <Link href='/' className=" text-color-accent"><House size={23}/></Link>
+                <Link href='/' className=" text-color-accent"><House size={30}/></Link>
             </div>
         </div>
     )

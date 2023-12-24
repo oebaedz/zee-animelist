@@ -1,8 +1,10 @@
 import HeaderMenu from "@/app/components/Utilities/HeaderMenu"
+import { authUserSession } from "@/libs/auth-libs"
 import Image from "next/image"
 import Link from "next/link"
 
-const Favorite = () => {
+const Favorite = async() => {
+  const user = await authUserSession()
   return (
     <section className="text-color-primary">
         <HeaderMenu title={'My Favorite'}/>
