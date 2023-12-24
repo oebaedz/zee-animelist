@@ -3,13 +3,13 @@
 import { Star } from "@phosphor-icons/react";
 import { useState } from "react";
 
-const AddFavoriteBtn = ({ favorited, anime_mal_id, user_email }) => {
+const AddFavoriteBtn = ({ favorited, anime_mal_id, user_email, anime_title, anime_image }) => {
   const [isAdded, setIsAdded] = useState(false);
 
   const handleAddFav = async (event) => {
     event.preventDefault();
 
-    const data = { anime_mal_id, user_email };
+    const data = { anime_mal_id, user_email, anime_title, anime_image };
 
     const response = await fetch("/api/v1/favorite", {
       method: "POST",

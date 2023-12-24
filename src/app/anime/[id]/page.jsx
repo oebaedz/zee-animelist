@@ -11,8 +11,8 @@ const Page = async ({ params: { id } }) => {
   const { data } = await getAnime(`anime/${id}`);
   const user = await authUserSession();
   const favorite = await prisma.favorite.findFirst({
-    where: { user_email: user?.email, anime_mal_id: id  }
-  })
+    where: { user_email: user?.email, anime_mal_id: id },
+  });
 
   return (
     <>
@@ -30,7 +30,14 @@ const Page = async ({ params: { id } }) => {
             <h3 className="text-color-accent font-medium text-2xl">
               {data.title}
             </h3>
-            { user && !favorite && <AddFavoriteBtn anime_mal_id={id} user_email={user?.email} /> }
+            {user && !favorite && (
+              <AddFavoriteBtn
+                anime_mal_id={id}
+                user_email={user?.email}
+                anime_title={data?.title}
+                anime_image={data?.images.webp.image_url}
+              />
+            )}
           </div>
           <div className="flex gap-4 flex-wrap">
             {data.genres.map((genre, index) => (
