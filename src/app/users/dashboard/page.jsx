@@ -13,7 +13,7 @@ const Dashboard = async () => {
         <Image src={user?.image} alt='user' width={200} height={200} className="rounded-full"/>
       <div className="flex mt-2 gap-2">
         <Link href='/users/dashboard/favorite' className="text-color-dark bg-color-accent px-6 py-1 font-bold">My Favorite</Link>
-        <Link href='/users/dashboard/comment' className="text-color-dark bg-color-accent px-6 py-1 font-bold">My Comment</Link>
+        <Link href='/users/dashboard/comment' className="text-color-dark bg-color-accent px-6 py-1 font-bold">My Comments</Link>
       </div>
       </div>
     </>
